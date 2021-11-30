@@ -1,0 +1,7 @@
+node_modules
+.env
+DB_MYSQL
+logs.log
+info.log
+error.log
+warn.log

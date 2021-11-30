@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "74474978-e072-48b6-bb30-f663950ec8a7",
+		"name": "MANAGE_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customers",
+			"item": [
+				{
+					"name": "createCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Vũ Minh Thông\",\r\n    \"contactLastName\":\"Vũ Minh\",\r\n    \"contactFirstName\":\"Thông\",\r\n    \"phone\": \"01688765555\",\r\n    \"addressLine1\":\"ba vi, tien phong\",\r\n    \"addressLine2\":\"khoongcos dau\",\r\n    \"city\":\"Ha Tay\",\r\n    \"state\":\"100000\",\r\n    \"postalCode\":\"1111\",    \r\n    \"country\":\"khong cos dau\",\r\n    \"salesRepEmployeeNumber\": null,\r\n    \"creditLimit\": 1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/customers/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/customers/all",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customers",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/customers/?id=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customers",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "udpateCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"customerNumber\": 1,\r\n        \"customerName\": \"Vũ Minh Thông\",\r\n        \"contactLastName\": \"Vũ Minh\",\r\n        \"contactFirstName\": \"Thông\",\r\n        \"phone\": \"01688151876\",\r\n        \"addressLine1\": \"ba vi, tien phong\",\r\n        \"addressLine2\": \"khoongcos dau\",\r\n        \"city\": \"Ha Tay\",\r\n        \"state\": \"100000\",\r\n        \"postalCode\": \"1212\",\r\n        \"country\": \"khong cos dau\",\r\n        \"salesRepEmployeeNumber\": 6,\r\n        \"creditLimit\": 1\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/customers/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/customers/?id=8",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customers",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "createEmployee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"phung\",\r\n    \"lastName\":\"viet\",\r\n    \"extension\":\"tabnine\",\r\n    \"email\":\"hello0004@gmail.com\",\r\n    \"officeCode\":\"FA\",\r\n    \"reportsTo\": 3,\r\n    \"jobTitle\":\"STAFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/employees/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"employees",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEmployees",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/employees/all",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"employees",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEmployee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/employees/?id=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"employees",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEmployee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeNumber\": 5,\r\n    \"firstName\": \"VIET\",\r\n    \"lastName\": \"viet\",\r\n    \"extension\": \"tabnine\",\r\n    \"email\": \"hello0004@gmail.com\",\r\n    \"officeCode\": \"FA\",\r\n    \"reportsTo\": 3,\r\n    \"jobTitle\": \"STAFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/employees/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"employees",
+								""
+							],
+							"query": [
+								{
+									"key": "employeeId",
+									"value": "9",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delEmployee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/employees/?employeeNumber=7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"employees",
+								""
+							],
+							"query": [
+								{
+									"key": "employeeNumber",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 201) {\r",
+									"    pm.environment.set(\"token\", pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"username0004\",\r\n    \"password\":\"viet1999\",\r\n    \"employeeNumber\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200) {\r",
+									"    pm.environment.set(\"token\", pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"username0000\",\r\n    \"password\": \"viet1999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/users/all-user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"all-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

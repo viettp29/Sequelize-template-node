@@ -1,0 +1,32 @@
+{
+  "name": "manage_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "s": "nodemon index.js",
+    "sync": "node ./models/sync.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "celebrate": "^15.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.12.0-alpha.1",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3",
+    "yamljs": "^0.3.0",
+    "yarn": "^1.22.17"
+  },
+  "devDependencies": {}
+}
