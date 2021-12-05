@@ -9,6 +9,7 @@ const generateToken = async (user) => {
   const { employeeNumber } = user;
   const employee = await Employee.findOne({ where: { employeeNumber } });
   const { jobTitle, officeCode } = employee;
+
   const payload = {
     employeeNumber,
     jobTitle,
